@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_URI, {
     .then(() => console.log("Connected to DB"))
     .catch(console.error);
 
-const Todo = require('./models/Todo');
+const Todo = require('./Models/Todo');
 
 app.get('/todos', async (req, res) => {
     const todos = await Todo.find();
